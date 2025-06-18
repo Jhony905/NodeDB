@@ -25,7 +25,7 @@ db.connect(err => {
 });
 
 app.get('/datos', (req, res) => {
-  db.query('SELECT * FROM sensores ORDER BY FechaHora DESC LIMIT 100', (err, results) => {
+  db.query('SELECT * FROM DB_MacProp ORDER BY FechaHora DESC LIMIT 100', (err, results) => {
     if (err) {
       res.status(500).json({ error: 'Error en la consulta MySQL' });
     } else {
